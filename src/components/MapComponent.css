@@ -1,0 +1,271 @@
+/* Base Styles */
+html {
+    font-size: 16px;  /* Default font size, can be adjusted for responsiveness */
+}
+
+/* Title */
+h1 {
+    font-size: 1.5rem; /* Use rem for scaling */
+    font-family: 'futura-lt-w01-book', sans-serif;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* General Legend Container */
+.legend-container {
+    position: absolute;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255,1);
+    z-index: 1001; /* Higher than sidebar */
+    width: 90%;
+    max-width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Logo Section */
+.legend-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.legend-logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Filter Dropdown */
+.legend-filter {
+    margin-bottom: 1rem;
+}
+
+.legend-filter label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.legend-filter select {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+/* Color Legend Items */
+.legend-items {
+    margin-top: 1rem;
+}
+
+.legend-items h4 {
+    margin-bottom: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.legend-color {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .legend-container {
+        width: 95%;
+        max-width: none;
+        padding: 1rem;
+    }
+
+    .legend-logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .legend-items {
+        margin-top: 0.5rem;
+    }
+
+    .legend-color {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .legend-filter select {
+        padding: 0.3rem;
+    }
+
+    /* Sidebar Responsiveness */
+    .sidebar {
+        width: 100%; /* Full width on mobile */
+        position: static; /* Remove fixed positioning on small screens */
+        height: auto;
+        box-shadow: none;
+    }
+
+    .legend {
+        width: 100%; /* Full width for the legend */
+        position: static; /* Remove absolute positioning */
+    }
+}
+
+/* Timeline */
+.timeline-popup {
+    position: relative;
+}
+
+.timeline-container {
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+}
+
+.birth-point {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#birth-decade-label {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 14px;
+}
+
+.timeline-line {
+    height: 2px;
+    background-color: #000;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.before-1850, .today {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12px;
+    color: #555;
+}
+
+.before-1850 {
+    left: 0;
+}
+
+.today {
+    right: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 80%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 1000; /* Sidebar below the legend */
+}
+
+/* Sidebar Content */
+.sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.sidebar .timeline-container {
+    margin-top: 20px;
+}
+
+.sidebar .timeline {
+    position: relative;
+    height: 50px;
+    background-color: #f1f1f1;
+    margin-top: 10px;
+}
+
+.sidebar .timeline .birth-point {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #FF0000;
+}
+
+.sidebar .timeline-line {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.sidebar .before-1850, .sidebar .today {
+    position: absolute;
+    top: 100%;
+    font-size: 0.8rem;
+}
+
+.sidebar .before-1850 {
+    left: 0;
+}
+
+.sidebar .today {
+    right: 0;
+}
+
+/* Legend Styling */
+/* Ensure Legend Visibility */
+.legend-container {
+    position: absolute;
+    padding: 1rem; 
+    border: 1px solid #ccc;
+    border-radius: 0.5rem; 
+    background-color: #fff;
+    z-index: 9999; /* High Z-index to ensure visibility */
+    width: 90%; 
+    max-width: 20%;
+    max-height: 90%;
+    left: 12%;
+    transform: translateX(-50%);
+    display: block; /* Ensure the container is visible */
+    top:2%;
+}
+
+/* Make sure legend items are correctly displayed */
+.legend-items {
+    margin-top: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem; 
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.legend-color {
+    width: 1rem; 
+    height: 1rem;
+    margin-right: 1rem; 
+    border-radius: 50%;
+}

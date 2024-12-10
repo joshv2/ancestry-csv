@@ -21,3 +21,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/public/python/__pycache__/
+/venv/
+/.env
+/public/data/*.csv
+/public/data/*.geojson
+*.log
+
