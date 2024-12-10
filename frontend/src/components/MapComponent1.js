@@ -37,9 +37,14 @@ const MapComponent = () => {
 
   // Load data from CSV and GeoJSON files
   useEffect(() => {
-    d3.csv('/data/jlp_combined_demo.csv')
+    fetch('http://localhost:5000/download-csv')
+    .then((response) => response.text())
+    // d3.csv('/data/jlp_combined_demo.csv')
       .then((data) => {
-        const updatedData = data.map((d) => ({
+        const parsedData = d3.csvParse(data); // `d3.csvParse` converts CSV text to an array of objects
+        const updatedData = parsedData.map((d) => ({
+
+        // const updatedData = data.map((d) => ({
           ...d,
           lat: parseFloat(d.Birth_City_Lat),
           lon: parseFloat(d.Birth_City_Lon),
