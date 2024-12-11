@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Dependencies
+This app requires the following packages to be installed: 
+backend: 
+- @aws-sdk/client-s3
+- express
+- cors
+- dotenv
+frontend: 
+- react 
+- react-dom 
+- react-scripts
+- react-leaflet-markercluster
