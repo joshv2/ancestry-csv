@@ -37,7 +37,7 @@ const MapComponent = () => {
 
   // Load data from CSV and GeoJSON files
   useEffect(() => {
-    fetch('http://localhost:5000/download-csv')
+    fetch('http://173.255.236.187:5000/download-csv')
     .then((response) => response.text())
     // d3.csv('/data/jlp_combined_demo.csv')
       .then((data) => {

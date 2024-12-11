@@ -1,4 +1,4 @@
-import { express } from 'express';
+import express from 'express';
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 import dotenv from 'dotenv';
 import cors from 'cors'; // Import cors
@@ -26,7 +26,7 @@ const s3 = new S3Client({
 
 // Enable CORS for all routes or specify allowed origins
 const corsOptions = {
-  origin: 'http://localhost:3000', // Allow frontend from localhost:3000
+  origin: 'http://173.255.236.187', // Allow frontend from localhost:3000
   methods: ['GET', 'POST'], // Allow GET and POST methods (adjust if necessary)
   allowedHeaders: ['Content-Type', 'Authorization'], // Optional, if you are using Authorization headers
 };

@@ -10,6 +10,8 @@ services:
       - ./backend/.env:/app/.env:ro # Mount .env as read-only
     environment:
       - NODE_ENV=production
+    networks:
+      - app_network
 
   frontend:
     build:
@@ -19,3 +21,11 @@ services:
       - "80:80"
     environment:
       - NODE_ENV=production
+    depends_on:
+      - backend
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
