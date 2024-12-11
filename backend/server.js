@@ -1,4 +1,4 @@
-import express from 'express';
+import { express } from 'express';
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 import dotenv from 'dotenv';
 import cors from 'cors'; // Import cors
