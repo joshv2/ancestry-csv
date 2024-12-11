@@ -26,7 +26,7 @@ const s3 = new S3Client({
 
 // Enable CORS for all routes or specify allowed origins
 const corsOptions = {
-  origin: 'http://localhost:3006', // Allow frontend from localhost:3000
+  origin: 'http://localhost:3000', // Allow frontend from localhost:3000
   methods: ['GET', 'POST'], // Allow GET and POST methods (adjust if necessary)
   allowedHeaders: ['Content-Type', 'Authorization'], // Optional, if you are using Authorization headers
 };
